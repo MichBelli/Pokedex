@@ -16,6 +16,8 @@ public class Pokedex extends ResourceReader {
         this.listaPokemon = new ArrayList<>();
     }
 
+
+
     public void caricaDaJson(String nomeFile) {
         // 1. Usa il metodo della classe astratta per ottenere il testo
         String jsonDati = leggiFile(nomeFile);
@@ -27,6 +29,21 @@ public class Pokedex extends ResourceReader {
         this.listaPokemon = gson.fromJson(jsonDati, listType);
 
         System.out.println("Caricati " + listaPokemon.size() + " pokemon dal file risorse.");
+    }
+
+
+
+    public String getNomiListaPokemon(){
+
+        String nomipokemon = "";
+
+        for(int i = 0; i < this.listaPokemon.size(); i++){
+
+            nomipokemon = nomipokemon + "\n" + listaPokemon.get(i).getNumero() + ": " + listaPokemon.get(i).getNome();
+        }
+
+
+        return nomipokemon;
     }
 
 }

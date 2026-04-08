@@ -2,13 +2,13 @@ package mdp2026.pokedex;
 
 public class Pokemon {
 
-    int numero = 0;
-    String nome = null;
-    String tipo1 = null;
-    String tipo2 = null;
-    double altezza = 0;
-    double peso = 0;
-    boolean scoperto = false;
+    private int numero = 0;
+    private String nome = null;
+    private String tipo1 = null;
+    private String tipo2 = null;
+    private double altezza = 0;
+    private double peso = 0;
+    private boolean scoperto = false;
 
     public Pokemon(int numero, String nome, String tipo1, String tipo2, double altezza, double peso) {
 
@@ -21,6 +21,32 @@ public class Pokemon {
         this.tipo2 = tipo2;
         this.altezza = altezza;
         this.peso = peso;
+    }
+
+
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getTipo1() {
+        return tipo1;
+    }
+
+    public String getTipo2() {
+        return tipo2;
+    }
+
+    public double getAltezza() {
+        return altezza;
+    }
+
+    public double getPeso() {
+        return peso;
     }
 
 

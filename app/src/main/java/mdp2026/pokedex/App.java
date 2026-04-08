@@ -11,6 +11,7 @@ public class App {
 
         Pokedex pd = new Pokedex();
         pd.caricaDaJson("data.json");
+        System.out.println(pd.getNomiListaPokemon());
         
     }
 }
